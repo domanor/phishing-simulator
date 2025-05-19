@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход ВКонтакте</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4a76a8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            width: 350px;
+            text-align: center;
+            color: #333;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #4a76a8;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4a76a8;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .warning {
+            color: red;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="logo">ВКонтакте</div>
+        <h2>Вход</h2>
+        
+        <form id="loginForm">
+            <input type="text" placeholder="Телефон или email" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+        </form>
+        
+        <div class="warning" id="warningMessage" style="display: none;">
+            Неверный логин или пароль. Попробуйте еще раз.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            setTimeout(() => {
+                document.getElementById('warningMessage').style.display = 'block';
+                // Здесь можно добавить сбор введенных данных
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

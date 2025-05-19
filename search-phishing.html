@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поисковый фишинг | Тренажер</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://yandex.ru/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="yandex-theme">
+    <div class="container">
+        <div class="yandex-header">
+            <div class="yandex-logo">
+                <span class="yandex-red">Я</span>ндекс
+            </div>
+            <div class="search-tabs">
+                <div class="tab active">Все</div>
+                <div class="tab">Картинки</div>
+                <div class="tab">Видео</div>
+                <div class="tab">Новости</div>
+                <div class="tab">Карты</div>
+            </div>
+        </div>
+        
+        <div class="yandex-search-container">
+            <div class="yandex-search-box">
+                <input type="text" id="search-input" class="yandex-search-input" placeholder="Найдётся всё" autocomplete="off">
+                <button id="search-button" class="yandex-search-button">Найти</button>
+                <div class="yandex-suggestions" id="suggestions-dropdown"></div>
+            </div>
+            <div class="yandex-example">
+                Найдётся всё. Например, <span class="example-query">как отличить фишинговый сайт</span>
+            </div>
+        </div>
+        
+        <div class="yandex-results" id="search-results">
+            <!-- Результаты поиска будут здесь -->
+        </div>
+        
+        <div class="yandex-footer">
+            <a href="index.html" class="back-link">← Вернуться к выбору тренажёра</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
