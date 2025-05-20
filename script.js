@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchOptions = ['Тинькофф-банк', 'ВК', 'Стим'];
 
 
-    // Обновляем структуру данных с реальными и фишинговыми URL
     const searchData = {
         'Тинькофф-банк': [
             {
@@ -150,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
         showSearchResults(query);
     }
     
-    // Обновляем функцию showSearchResults
     function showSearchResults(query) {
         const results = searchData[query];
         
